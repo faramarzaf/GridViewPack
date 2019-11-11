@@ -87,11 +87,12 @@ public class GridSample2Activity extends AppCompatActivity {
                 }
                 removedItems.add(selectedItemId);
                 data.remove(selectedItemPosition);
-                Toast.makeText(context, selectedName + " Removed", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, selectedName + " Removed", Toast.LENGTH_SHORT).show();
                 adapter.notifyItemRemoved(selectedItemPosition);
             }
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
