@@ -2,7 +2,7 @@ package com.faramarz.tictacdev.gridviewapp.sample2;
 
 import com.faramarz.tictacdev.gridviewapp.R;
 
-public class MyData {
+public class MyData2 {
 
     static String[] nameArray = {"John", "Obama", "David", "Froyo", "Charls", "Scott", "Roger", "Smith"};
     static String[] versionArray = {"1.5", "1.6", "2.0-2.1", "2.2-2.2.3", "2.3-2.3.7", "3.0-3.2.6", "4.0-4.0.4", "4.1-4.3.1"};

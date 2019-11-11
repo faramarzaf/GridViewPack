@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="#E4D0BC"
-        card_view:cardElevation="5dp"
+
+        card_view:cardElevation="7dp"
         >
 
         <LinearLayout
@@ -19,7 +20,7 @@
             android:orientation="vertical">
 
             <com.faramarz.tictacdev.gridviewapp.sample1.SquareImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
@@ -32,11 +33,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#8DCECECE"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewName"
+            android:id="@+id/textViewName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -44,7 +45,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
-            android:id="@+id/textViewVersion"
+            android:id="@+id/textViewVersion2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

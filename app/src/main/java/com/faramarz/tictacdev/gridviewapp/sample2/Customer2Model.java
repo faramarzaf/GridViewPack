@@ -1,13 +1,13 @@
 package com.faramarz.tictacdev.gridviewapp.sample2;
 
-public class CustomerModel {
+public class Customer2Model {
 
     String name;
     String version;
     int id_;
     int image;
 
-    public CustomerModel(String name, String version, int id_, int image) {
+    public Customer2Model(String name, String version, int id_, int image) {
         this.name = name;
         this.version = version;
         this.id_ = id_;

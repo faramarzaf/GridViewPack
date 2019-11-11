@@ -14,9 +14,9 @@ import com.faramarz.tictacdev.gridviewapp.sample1.GridSample1Activity;
 
 import java.util.ArrayList;
 
-public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyViewHolder> {
+public class CustomerAdapter2 extends RecyclerView.Adapter<CustomerAdapter2.MyViewHolder> {
 
-    private ArrayList<CustomerModel> dataSet;
+    private ArrayList<Customer2Model> dataSet;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -26,13 +26,13 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = itemView.findViewById(R.id.textViewName);
-            this.textViewVersion = itemView.findViewById(R.id.textViewVersion);
-            this.imageViewIcon = itemView.findViewById(R.id.imageView);
+            this.textViewName = itemView.findViewById(R.id.textViewName2);
+            this.textViewVersion = itemView.findViewById(R.id.textViewVersion2);
+            this.imageViewIcon = itemView.findViewById(R.id.imageView2);
         }
     }
 
-    public CustomerAdapter(ArrayList<CustomerModel> data) {
+    public CustomerAdapter2(ArrayList<Customer2Model> data) {
         this.dataSet = data;
     }
 
@@ -40,7 +40,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_cards2_item, parent, false);
-        view.setOnClickListener(GridSample1Activity.myOnClickListener);
+        view.setOnClickListener(GridSample2Activity.myOnClickListener);
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }

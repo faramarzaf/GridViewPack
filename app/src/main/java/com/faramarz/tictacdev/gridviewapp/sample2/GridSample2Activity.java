@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ public class GridSample2Activity extends AppCompatActivity {
     public static View.OnClickListener myOnClickListener;
     private static RecyclerView.Adapter adapter;
     private static RecyclerView recyclerView;
-    private static ArrayList<CustomerModel> data;
+    private static ArrayList<Customer2Model> data;
     private static ArrayList<Integer> removedItems;
 
     LinearLayoutManager linearLayoutManager;
@@ -44,16 +45,16 @@ public class GridSample2Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        for (int i = 0; i < MyData.nameArray.length; i++) {
-            data.add(new CustomerModel(
-                    MyData.nameArray[i],
-                    MyData.versionArray[i],
-                    MyData.id_[i],
-                    MyData.drawableArray[i]
+        for (int i = 0; i < MyData2.nameArray.length; i++) {
+            data.add(new Customer2Model(
+                    MyData2.nameArray[i],
+                    MyData2.versionArray[i],
+                    MyData2.id_[i],
+                    MyData2.drawableArray[i]
             ));
         }
         removedItems = new ArrayList<>();
-        adapter = new CustomerAdapter(data);
+        adapter = new CustomerAdapter2(data);
         recyclerView.setAdapter(adapter);
 
 
@@ -76,12 +77,12 @@ public class GridSample2Activity extends AppCompatActivity {
             int selectedItemPosition = recyclerView.getChildPosition(v);
             RecyclerView.ViewHolder viewHolder = recyclerView.findViewHolderForPosition(selectedItemPosition);
             if (viewHolder != null) {
-                TextView textViewName = viewHolder.itemView.findViewById(R.id.textViewName);
+                TextView textViewName = viewHolder.itemView.findViewById(R.id.textViewName2);
                 String selectedName = (String) textViewName.getText();
                 int selectedItemId = -1;
-                for (int i = 0; i < MyData.nameArray.length; i++) {
-                    if (selectedName.equals(MyData.nameArray[i])) {
-                        selectedItemId = MyData.id_[i];
+                for (int i = 0; i < MyData2.nameArray.length; i++) {
+                    if (selectedName.equals(MyData2.nameArray[i])) {
+                        selectedItemId = MyData2.id_[i];
                     }
                 }
                 removedItems.add(selectedItemId);
@@ -91,12 +92,17 @@ public class GridSample2Activity extends AppCompatActivity {
             }
         }
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main2, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.add_item) {
+        if (item.getItemId() == R.id.add_item_2) {
             //check if any items to add
             if (removedItems.size() != 0) {
                 addRemovedItemToList();
@@ -109,11 +115,11 @@ public class GridSample2Activity extends AppCompatActivity {
 
     private void addRemovedItemToList() {
         int addItemAtListPosition = 0;
-        data.add(addItemAtListPosition, new CustomerModel(
-                MyData.nameArray[removedItems.get(0)],
-                MyData.versionArray[removedItems.get(0)],
-                MyData.id_[removedItems.get(0)],
-                MyData.drawableArray[removedItems.get(0)]));
+        data.add(addItemAtListPosition, new Customer2Model(
+                MyData2.nameArray[removedItems.get(0)],
+                MyData2.versionArray[removedItems.get(0)],
+                MyData2.id_[removedItems.get(0)],
+                MyData2.drawableArray[removedItems.get(0)]));
         adapter.notifyItemInserted(addItemAtListPosition);
         removedItems.remove(0);
     }
