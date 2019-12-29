@@ -1,11 +1,5 @@
 package com.faramarz.tictacdev.gridviewapp.sample3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,11 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.faramarz.tictacdev.gridviewapp.R;
-import com.faramarz.tictacdev.gridviewapp.sample2.Customer2Model;
-import com.faramarz.tictacdev.gridviewapp.sample2.CustomerAdapter2;
-import com.faramarz.tictacdev.gridviewapp.sample2.GridSample2Activity;
-import com.faramarz.tictacdev.gridviewapp.sample2.MyData2;
 
 import java.util.ArrayList;
 

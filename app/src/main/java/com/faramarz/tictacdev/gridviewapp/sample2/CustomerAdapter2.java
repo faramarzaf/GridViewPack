@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.faramarz.tictacdev.gridviewapp.R;
-import com.faramarz.tictacdev.gridviewapp.sample1.GridSample1Activity;
 
 import java.util.ArrayList;
 
